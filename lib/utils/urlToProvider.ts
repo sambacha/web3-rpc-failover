@@ -4,6 +4,7 @@
 */
 
 'use strict';
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'ethers'.
 const ethers = require('ethers');
 
 /**
@@ -13,7 +14,8 @@ const ethers = require('ethers');
  *  @note this is defined in a `.yaml` configuration file
  */
 
-const urlToProvider = (url, networkId) => {
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'urlToProvi... Remove this comment to see the full error message
+const urlToProvider = (url: any, networkId: any) => {
   if (url.startsWith('http')) {
     return new ethers.providers.JsonRpcProvider(url, networkId);
   } else if (url.startsWith('ws')) {

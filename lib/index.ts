@@ -4,8 +4,11 @@
 * @version 0.2.0
 */
 
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'ethers'.
 const ethers = require('ethers');
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'getConfig'... Remove this comment to see the full error message
 const getConfig = require('./utils/configParser.js');
+// @ts-expect-error ts-migrate(2451) FIXME: Cannot redeclare block-scoped variable 'urlToProvi... Remove this comment to see the full error message
 const urlToProvider = require('./utils/urlToProvider.js');
 
 /**
@@ -14,27 +17,29 @@ const urlToProvider = require('./utils/urlToProvider.js');
 
 /** @class FallbackProvider */
 class FallbackProvider {
-  
-/**
-* Generates the fallback provider from given config
-* @param {path} pathToConfig
-*/
+  config: any;
+  provider: any;
 
- constructor(pathToConfig) {
-    this.config = getConfig(pathToConfig);
-    const providerConfig = this.config.providers.map((provider) => {
-      const config = {};
-      config.provider = urlToProvider(provider.url);
-      Object.assign(config, provider.config);
-      return config;
-});  
-    this.provider = new ethers.providers.FallbackProvider(providerConfig);
-}
+  /**
+  * Generates the fallback provider from given config
+  * @param {path} pathToConfig
+  */
 
-/**
-* Returns the fallback provider
-* @return {provider}
-*/
+  constructor(pathToConfig: any) {
+     this.config = getConfig(pathToConfig);
+     const providerConfig = this.config.providers.map((provider: any) => {
+       const config = {};
+       (config as any).provider = urlToProvider(provider.url);
+       Object.assign(config, provider.config);
+       return config;
+ });  
+     this.provider = new ethers.providers.FallbackProvider(providerConfig);
+ }
+
+  /**
+  * Returns the fallback provider
+  * @return {provider}
+  */
 
   get() {
     return this.provider;
