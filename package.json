@@ -1,7 +1,7 @@
 {
-  "name": "web3-provider-failover",
+  "name": "ethereum-provider-failover",
   "version": "1.0.0",
-  "description": "rpc failover for web3",
+  "description": "configurable rpc failover for ethereum dapps using ether-js",
   "main": "lib/index.js",
   "scripts": {
     "coverage": "npx nyc npm test",
