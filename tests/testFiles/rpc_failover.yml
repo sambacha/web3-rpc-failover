@@ -1,0 +1,6 @@
+providers:
+  - url: 'https://mainnet.infura.io/v3/71b9395693ba485ab4fc10a234ea488a'
+    config:
+      priority: 2
+      stallTimeout: 200
+      weight: 2
