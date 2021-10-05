@@ -1,6 +1,6 @@
 {
   "name": "ethereum-provider-failover",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "configurable rpc failover for ethereum dapps using ether-js",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sambacha/web3-failover.git"
+    "url": "git+https://github.com/sambacha/web3-rpc-failover.git"
   },
   "files": [
     "/lib",
@@ -19,7 +19,7 @@
   ],
   "author": "Sam Bacha <sambacha@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/sambacha/web3-failover#readme",
+  "homepage": "https://github.com/sambacha/web3-rpc-failover#readme",
   "dependencies": {
     "@ethersproject/providers": "^5.4.4",
     "yaml": "^1.10.2"
