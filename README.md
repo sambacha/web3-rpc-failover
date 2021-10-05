@@ -1,9 +1,10 @@
 # web3-rpc-failover
- 
- `npm i web3-rpc-failover`  
 
+> Exposes `ethers.js` FailoverProvider via yaml configuration file for cascading connection fallbacks
 
 ## Usage
+
+ `npm i ethereum-provider-failover`  
 
 ### create configuration file
 
@@ -29,7 +30,7 @@
 ### Import into application 
 
   ```js
-  const {FallbackProvider} = require('web3-rpc-failover')
+  const {FallbackProvider} = require('ethereum-provider-failover')
   const provider = new FallbackProvider(<pathToConfig>)
   ```
 
