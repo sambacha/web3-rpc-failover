@@ -1,6 +1,6 @@
 # web3-rpc-failover
 
-> Exposes `ethers.js` FailoverProvider via yaml configuration file for cascading connection fallbacks
+> FailoverProvider via yaml configuration file for cascading connection fallbacks
 
 ## Usage
 
