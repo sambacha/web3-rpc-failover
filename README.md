@@ -2,11 +2,19 @@
 
 > FailoverProvider via yaml configuration file for cascading connection fallbacks
 
+## Motivation
+
+Providing assurances for Service Provider outages in a robust and simple way. 
+
+Do not confuse our usage of `failover` with how *ethers-js* uses _fallback_. [see the ethers documentation, fallback provider](https://docs.ethers.io/v5/single-page/#/v5/api/providers/other/-%23-FallbackProvider)
+
+
+
 ## Usage
 
  `npm i ethereum-provider-failover`  
 
-### create configuration file
+### External Module
 
   ```yaml
   providers:
@@ -22,12 +30,10 @@
         weight: 1
   ```
 
-
-
   `priority`:  priority used for the provider
   `stallTimeout`:  timeout (in ms)
 
-### Import into application 
+### Library
 
   ```js
   const {FallbackProvider} = require('ethereum-provider-failover')
