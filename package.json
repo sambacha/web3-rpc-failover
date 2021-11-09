@@ -1,31 +1,51 @@
 {
-  "name": "ethereum-provider-failover",
-  "version": "1.1.0",
-  "description": "configurable rpc failover for ethereum dapps using ether-js",
-  "main": "lib/index.js",
+  "name": "web3-provider-failover",
+  "version": "1.2.0",
+  "description": "configurable rpc failover for ethereum dapps using ethers framework",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "src"
+  ],
   "scripts": {
     "coverage": "npx nyc npm test",
     "test": "npx mocha tests/*.test.js --exit",
     "lint": "npx eslint lib/ --fix",
-    "build": "npx tsdx build"
+    "build": "npx tsdx build",
+    "start": "tsdx watch",
+    "test-ts": "tsdx test",
+    "lint-ts": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
   },
+  "module": "dist/web3-provider-recover.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/web3-provider-recover.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/web3-provider-recover.esm.js",
+      "limit": "10 KB"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sambacha/web3-rpc-failover.git"
   },
-  "files": [
-    "/lib",
-    "/src"
-  ],
   "author": "Sam Bacha <sambacha@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/sambacha/web3-rpc-failover#readme",
   "dependencies": {
-    "@ethersproject/providers": "^5.4.4",
+    "@ethersproject/providers": "^5.5.0",
     "yaml": "^1.10.2"
   },
   "devDependencies": {
     "@types/chai": "^4.2.22",
+    "@types/jest": "^27.0.2",
     "@types/mocha": "^9.0.0",
     "@types/node": "^14.17.20",
     "chai": "^4.3.4",
@@ -34,8 +54,12 @@
     "mocha": "^9.1.2",
     "nyc": "^15.1.0",
     "prettier": "^2.4.1",
+    "ts-jest": "^27.0.7",
     "ts-migrate": "^0.1.21",
     "tsdx": "^0.14.1",
-    "tslib": "^2.3.1"
+    "tslib": "^2.3.1",
+    "@size-limit/preset-small-lib": "^6.0.4",
+    "size-limit": "^6.0.4",
+    "typescript": "^4.4.4"
   }
 }
