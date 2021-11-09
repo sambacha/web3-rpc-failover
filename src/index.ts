@@ -50,4 +50,4 @@ function networkId(_url: any, _networkId: any): any {
   throw new Error('Function not implemented.');
 }
 /** @exports FailsafeProvider */
-export default FailsafeProvider;
+export FailsafeProvider;

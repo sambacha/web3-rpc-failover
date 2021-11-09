@@ -13,7 +13,7 @@
     "coverage": "npx nyc npm test",
     "test": "npx mocha tests/*.test.js --exit",
     "lint": "npx eslint lib/ --fix",
-    "build": "npx tsdx build",
+    "compile": "npx tsdx build",
     "start": "tsdx watch",
     "test-ts": "tsdx test",
     "lint-ts": "tsdx lint",
@@ -44,6 +44,7 @@
     "yaml": "^1.10.2"
   },
   "devDependencies": {
+    "@size-limit/preset-small-lib": "^6.0.4",
     "@types/chai": "^4.2.22",
     "@types/jest": "^27.0.2",
     "@types/mocha": "^9.0.0",
@@ -54,12 +55,12 @@
     "mocha": "^9.1.2",
     "nyc": "^15.1.0",
     "prettier": "^2.4.1",
+    "size-limit": "^6.0.4",
     "ts-jest": "^27.0.7",
     "ts-migrate": "^0.1.21",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
-    "@size-limit/preset-small-lib": "^6.0.4",
-    "size-limit": "^6.0.4",
+    "typedoc": "^0.22.8",
     "typescript": "^4.4.4"
   }
 }
