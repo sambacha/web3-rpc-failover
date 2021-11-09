@@ -10,11 +10,16 @@ Do not confuse our usage of `failover` with how *ethers-js* uses _fallback_. [se
 
 
 
-## Usage
+## Install
 
- `npm i ethereum-provider-failover`  
+ `npm i web3-rpc-failover`  
 
-### External Module
+
+### Usage: as an external module
+
+
+- install web3-rpc-failover
+- configure your RPC Service Providers in order of preference for failover
 
   ```yaml
   providers:
@@ -33,11 +38,11 @@ Do not confuse our usage of `failover` with how *ethers-js* uses _fallback_. [se
   `priority`:  priority used for the provider
   `stallTimeout`:  timeout (in ms)
 
-### Library
+### Usage: as a library
 
   ```js
-  const {FallbackProvider} = require('ethereum-provider-failover')
-  const provider = new FallbackProvider(<pathToConfig>)
+  const {FallbackProvider} = require('web3-rpc-failover')
+  const provider = new FallbackProvider(<pathToYAMLConfig>)
   ```
 
 
