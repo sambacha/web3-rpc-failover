@@ -93,4 +93,4 @@ function networkId(_url, _networkId) {
 }
 
 exports.default = FailsafeProvider;
-//# sourceMappingURL=web3-provider-failover.cjs.development.js.map
+//# sourceMappingURL=web3-rpc-failover.cjs.development.js.map

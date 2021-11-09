@@ -1,5 +1,5 @@
 {
-  "name": "web3-provider-failover",
+  "name": "web3-rpc-failover",
   "version": "1.2.1",
   "description": "configurable rpc failover for ethereum dapps using ethers framework",
   "main": "dist/index.js",

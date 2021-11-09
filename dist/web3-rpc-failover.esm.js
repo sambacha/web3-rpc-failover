@@ -89,4 +89,4 @@ function networkId(_url, _networkId) {
 }
 
 export default FailsafeProvider;
-//# sourceMappingURL=web3-provider-failover.esm.js.map
+//# sourceMappingURL=web3-rpc-failover.esm.js.map
