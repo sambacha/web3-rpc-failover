@@ -40,7 +40,7 @@
   "license": "MIT",
   "homepage": "https://github.com/sambacha/web3-rpc-failover#readme",
   "dependencies": {
-    "@ethersproject/providers": "^5.5.0",
+    "@ethersproject/providers": "^5.6.4",
     "yaml": "^1.10.2"
   },
   "devDependencies": {
