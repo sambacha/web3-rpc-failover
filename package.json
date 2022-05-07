@@ -1,14 +1,18 @@
 {
   "name": "web3-rpc-failover",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "configurable rpc failover for ethereum dapps using ethers framework",
-  "main": "dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "lib",
-    "src"
-  ],
+  "files": ["dist", "src"],
   "scripts": {
     "coverage": "npx nyc npm test",
     "test": "npx mocha tests/*.test.js --exit",
@@ -21,7 +25,6 @@
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
-  "module": "dist/web3-provider-recover.esm.js",
   "size-limit": [
     {
       "path": "dist/web3-provider-recover.cjs.production.min.js",
