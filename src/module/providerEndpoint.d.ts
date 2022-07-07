@@ -11,5 +11,4 @@ import * as providers from '@ethersproject/providers';
  *  @note this is defined in a `.yaml` configuration file
  */
 declare const providerEndpoint: (url: any, networkId: any) => providers.JsonRpcProvider;
-export default providerEndpoint;
-/** @exports providerEndpoint */
+//export default providerEndpoint;

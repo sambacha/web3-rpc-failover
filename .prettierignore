@@ -1,0 +1,8 @@
+*.json
+*.js
+*.min.js
+dist/
+build/
+docs/
+*.css
+*.scss
