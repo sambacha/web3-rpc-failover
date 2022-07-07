@@ -1,7 +1,7 @@
-const { expect } = require('chai');
+import { expect } from 'chai';
 
-const getConfig = require('../lib/utils/configParser.js');
-const urlToProvider = require('../lib/utils/urlToProvider.js');
+import getConfig from '../dist/module/configParser.js';
+import urlToProvider,{ bind } from '../dist/module/urlToProvider.js';
 
 describe('Config Parser', () => {
   it('Should parse YAML', () => {
@@ -27,7 +27,7 @@ describe('URL Parser', () => {
   });
 
   it('Should throw on invalid protocol', () => {
-    expect(urlToProvider.bind(urlToProvider, 'random://test.com')).to.throw(
+    expect(bind(urlToProvider, 'random://test.com')).to.throw(
       'Could not resolve url to provider',
     );
   });
