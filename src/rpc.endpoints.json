@@ -2,9 +2,9 @@
 {
     "1":{
         "rpcs":[
+            "https://api.securerpc.com/v1",
             "https://api.mycryptoapi.com/eth",
             "https://rpc.flashbots.net/",
-            "https://eth-mainnet.gateway.pokt.network/v1/5f3453978e354ab992c4da79",
             "https://cloudflare-eth.com/",
             "https://mainnet-nethermind.blockscout.com/",
             "https://nodes.mewapi.io/rpc/eth",
